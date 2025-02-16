@@ -1,0 +1,185 @@
+[
+  {
+    "russian": "говорить",
+    "english": "to speak",
+    "latin": "govorit'",
+    "parts": [
+      { "russian": "го", "latin": ["go"] },
+      { "russian": "во", "latin": ["vo"] },
+      { "russian": "рить", "latin": ["rit'"] }
+    ]
+  },
+  {
+    "russian": "читать",
+    "english": "to read",
+    "latin": "chitat'",
+    "parts": [
+      { "russian": "чи", "latin": ["chi"] },
+      { "russian": "тать", "latin": ["tat'"] }
+    ]
+  },
+  {
+    "russian": "писать",
+    "english": "to write",
+    "latin": "pisat'",
+    "parts": [
+      { "russian": "пи", "latin": ["pi"] },
+      { "russian": "сать", "latin": ["sat'"] }
+    ]
+  },
+  {
+    "russian": "делать",
+    "english": "to do",
+    "latin": "delat'",
+    "parts": [
+      { "russian": "де", "latin": ["de"] },
+      { "russian": "лать", "latin": ["lat'"] }
+    ]
+  },
+  {
+    "russian": "идти",
+    "english": "to go",
+    "latin": "idti",
+    "parts": [
+      { "russian": "ид", "latin": ["id"] },
+      { "russian": "ти", "latin": ["ti"] }
+    ]
+  },
+  {
+    "russian": "бежать",
+    "english": "to run",
+    "latin": "bezhat'",
+    "parts": [
+      { "russian": "бе", "latin": ["be"] },
+      { "russian": "жать", "latin": ["zhat'"] }
+    ]
+  },
+  {
+    "russian": "видеть",
+    "english": "to see",
+    "latin": "videt'",
+    "parts": [
+      { "russian": "ви", "latin": ["vi"] },
+      { "russian": "деть", "latin": ["det'"] }
+    ]
+  },
+  {
+    "russian": "слышать",
+    "english": "to hear",
+    "latin": "slyshat'",
+    "parts": [
+      { "russian": "слы", "latin": ["sly"] },
+      { "russian": "шать", "latin": ["shat'"] }
+    ]
+  },
+  {
+    "russian": "знать",
+    "english": "to know",
+    "latin": "znat'",
+    "parts": [
+      { "russian": "зна", "latin": ["zna"] },
+      { "russian": "ть", "latin": ["t'"] }
+    ]
+  },
+  {
+    "russian": "думать",
+    "english": "to think",
+    "latin": "dumat'",
+    "parts": [
+      { "russian": "ду", "latin": ["du"] },
+      { "russian": "мать", "latin": ["mat'"] }
+    ]
+  },
+  {
+    "russian": "работать",
+    "english": "to work",
+    "latin": "rabotat'",
+    "parts": [
+      { "russian": "рабо", "latin": ["rabo"] },
+      { "russian": "тать", "latin": ["tat'"] }
+    ]
+  },
+  {
+    "russian": "учиться",
+    "english": "to study",
+    "latin": "uchit'sya",
+    "parts": [
+      { "russian": "у", "latin": ["u"] },
+      { "russian": "чить", "latin": ["chit'"] },
+      { "russian": "ся", "latin": ["sya"] }
+    ]
+  },
+  {
+    "russian": "жить",
+    "english": "to live",
+    "latin": "zhit'",
+    "parts": [
+      { "russian": "жи", "latin": ["zhi"] },
+      { "russian": "ть", "latin": ["t'"] }
+    ]
+  },
+  {
+    "russian": "любить",
+    "english": "to love",
+    "latin": "lyubit'",
+    "parts": [
+      { "russian": "лю", "latin": ["lyu"] },
+      { "russian": "бить", "latin": ["bit'"] }
+    ]
+  },
+  {
+    "russian": "ненавидеть",
+    "english": "to hate",
+    "latin": "nenavidet'",
+    "parts": [
+      { "russian": "не", "latin": ["ne"] },
+      { "russian": "на", "latin": ["na"] },
+      { "russian": "видеть", "latin": ["videt'"] }
+    ]
+  },
+  {
+    "russian": "играть",
+    "english": "to play",
+    "latin": "igrat'",
+    "parts": [
+      { "russian": "иг", "latin": ["ig"] },
+      { "russian": "рать", "latin": ["rat'"] }
+    ]
+  },
+  {
+    "russian": "пить",
+    "english": "to drink",
+    "latin": "pit'",
+    "parts": [
+      { "russian": "пи", "latin": ["pi"] },
+      { "russian": "ть", "latin": ["t'"] }
+    ]
+  },
+  {
+    "russian": "есть",
+    "english": "to eat",
+    "latin": "est'",
+    "parts": [
+      { "russian": "е", "latin": ["e"] },
+      { "russian": "сть", "latin": ["st'"] }
+    ]
+  },
+  {
+    "russian": "спать",
+    "english": "to sleep",
+    "latin": "spat'",
+    "parts": [
+      { "russian": "спа", "latin": ["spa"] },
+      { "russian": "ть", "latin": ["t'"] }
+    ]
+  },
+  {
+    "russian": "стоять",
+    "english": "to stand",
+    "latin": "stoyat'",
+    "parts": [
+      { "russian": "сто", "latin": ["sto"] },
+      { "russian": "ять", "latin": ["yat'"] }
+    ]
+  }
+]

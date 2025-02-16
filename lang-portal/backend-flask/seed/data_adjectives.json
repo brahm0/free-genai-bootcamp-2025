@@ -1,0 +1,201 @@
+[
+  {
+    "russian": "хороший",
+    "english": "good",
+    "latin": "khoroshiy",
+    "parts": [
+      { "russian": "хо", "latin": ["kho"] },
+      { "russian": "ро", "latin": ["ro"] },
+      { "russian": "ший", "latin": ["shiy"] }
+    ]
+  },
+  {
+    "russian": "плохой",
+    "english": "bad",
+    "latin": "plokhoy",
+    "parts": [
+      { "russian": "пло", "latin": ["plo"] },
+      { "russian": "хой", "latin": ["khoy"] }
+    ]
+  },
+  {
+    "russian": "большой",
+    "english": "big",
+    "latin": "bol'shoy",
+    "parts": [
+      { "russian": "боль", "latin": ["bol'"] },
+      { "russian": "шой", "latin": ["shoy"] }
+    ]
+  },
+  {
+    "russian": "маленький",
+    "english": "small",
+    "latin": "malen'kiy",
+    "parts": [
+      { "russian": "ма", "latin": ["ma"] },
+      { "russian": "лень", "latin": ["len'"] },
+      { "russian": "кий", "latin": ["kiy"] }
+    ]
+  },
+  {
+    "russian": "новый",
+    "english": "new",
+    "latin": "novyy",
+    "parts": [
+      { "russian": "но", "latin": ["no"] },
+      { "russian": "вый", "latin": ["vyy"] }
+    ]
+  },
+  {
+    "russian": "старый",
+    "english": "old",
+    "latin": "staryy",
+    "parts": [
+      { "russian": "ста", "latin": ["sta"] },
+      { "russian": "рый", "latin": ["ryy"] }
+    ]
+  },
+  {
+    "russian": "молодой",
+    "english": "young",
+    "latin": "molodoy",
+    "parts": [
+      { "russian": "мо", "latin": ["mo"] },
+      { "russian": "ло", "latin": ["lo"] },
+      { "russian": "дой", "latin": ["doy"] }
+    ]
+  },
+  {
+    "russian": "красивый",
+    "english": "beautiful",
+    "latin": "krasivyy",
+    "parts": [
+      { "russian": "кра", "latin": ["kra"] },
+      { "russian": "си", "latin": ["si"] },
+      { "russian": "вый", "latin": ["vyy"] }
+    ]
+  },
+  {
+    "russian": "уродливый",
+    "english": "ugly",
+    "latin": "urodlivyy",
+    "parts": [
+      { "russian": "уро", "latin": ["uro"] },
+      { "russian": "дли", "latin": ["dli"] },
+      { "russian": "вый", "latin": ["vyy"] }
+    ]
+  },
+  {
+    "russian": "дорогой",
+    "english": "expensive",
+    "latin": "dorogoy",
+    "parts": [
+      { "russian": "до", "latin": ["do"] },
+      { "russian": "ро", "latin": ["ro"] },
+      { "russian": "гой", "latin": ["goy"] }
+    ]
+  },
+  {
+    "russian": "дешёвый",
+    "english": "cheap",
+    "latin": "deshyovyy",
+    "parts": [
+      { "russian": "де", "latin": ["de"] },
+      { "russian": "шё", "latin": ["shyo"] },
+      { "russian": "вый", "latin": ["vyy"] }
+    ]
+  },
+  {
+    "russian": "быстрый",
+    "english": "fast",
+    "latin": "bystryy",
+    "parts": [
+      { "russian": "бы", "latin": ["by"] },
+      { "russian": "стрый", "latin": ["stryy"] }
+    ]
+  },
+  {
+    "russian": "медленный",
+    "english": "slow",
+    "latin": "medlennyy",
+    "parts": [
+      { "russian": "мед", "latin": ["med"] },
+      { "russian": "лен", "latin": ["len"] },
+      { "russian": "ный", "latin": ["nyy"] }
+    ]
+  },
+  {
+    "russian": "тёплый",
+    "english": "warm",
+    "latin": "tyoplyy",
+    "parts": [
+      { "russian": "тё", "latin": ["tyo"] },
+      { "russian": "плый", "latin": ["plyy"] }
+    ]
+  },
+  {
+    "russian": "холодный",
+    "english": "cold",
+    "latin": "kholodnyy",
+    "parts": [
+      { "russian": "хо", "latin": ["kho"] },
+      { "russian": "лод", "latin": ["lod"] },
+      { "russian": "ный", "latin": ["nyy"] }
+    ]
+  },
+  {
+    "russian": "счастливый",
+    "english": "happy",
+    "latin": "schastlivyy",
+    "parts": [
+      { "russian": "сча", "latin": ["scha"] },
+      { "russian": "стли", "latin": ["stli"] },
+      { "russian": "вый", "latin": ["vyy"] }
+    ]
+  },
+  {
+    "russian": "грустный",
+    "english": "sad",
+    "latin": "grustnyy",
+    "parts": [
+      { "russian": "гру", "latin": ["gru"] },
+      { "russian": "стный", "latin": ["stnyy"] }
+    ]
+  },
+  {
+    "russian": "умный",
+    "english": "smart",
+    "latin": "umnyy",
+    "parts": [
+      { "russian": "ум", "latin": ["um"] },
+      { "russian": "ный", "latin": ["nyy"] }
+    ]
+  },
+  {
+    "russian": "глупый",
+    "english": "stupid",
+    "latin": "glupyy",
+    "parts": [
+      { "russian": "глу", "latin": ["glu"] },
+      { "russian": "пый", "latin": ["pyy"] }
+    ]
+  },
+  {
+    "russian": "сильный",
+    "english": "strong",
+    "latin": "sil'nyy",
+    "parts": [
+      { "russian": "силь", "latin": ["sil'"] },
+      { "russian": "ный", "latin": ["nyy"] }
+    ]
+  },
+  {
+    "russian": "слабый",
+    "english": "weak",
+    "latin": "slabyy",
+    "parts": [
+      { "russian": "сла", "latin": ["sla"] },
+      { "russian": "бый", "latin": ["byy"] }
+    ]
+  }
+]
