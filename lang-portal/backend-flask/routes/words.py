@@ -3,6 +3,11 @@ from flask_cors import cross_origin
 import json
 
 def load(app):
+  # Root endpoint: GET /
+  @app.route('/', methods=['GET'])
+  def index():
+    return jsonify({"message": "Welcome to the Language Portal API"}), 200
+
   # Endpoint: GET /words with pagination (50 words per page)
   @app.route('/words', methods=['GET'])
   @cross_origin()
@@ -18,19 +23,19 @@ def load(app):
       offset = (page - 1) * words_per_page
 
       # Get sorting parameters from the query string
-      sort_by = request.args.get('sort_by', 'Cyrillic')  # Default to sorting by 'Cyrillic'
+      sort_by = request.args.get('sort_by', 'russian')  # Default to sorting by 'russian'
       order = request.args.get('order', 'asc')  # Default to ascending order
 
       # Validate sort_by and order
-      valid_columns = ['Cyrillic', 'English', 'Latin', 'correct_count', 'wrong_count']
+      valid_columns = ['russian', 'english', 'latin', 'correct_count', 'wrong_count']
       if sort_by not in valid_columns:
-        sort_by = 'Cyrillic'
+        sort_by = 'russian'
       if order not in ['asc', 'desc']:
         order = 'asc'
 
       # Query to fetch words with sorting
       cursor.execute(f'''
-        SELECT w.id, w.Cyrillic, w.English, w.Latin, 
+        SELECT w.id, w.russian, w.english, w.latin, 
             COALESCE(r.correct_count, 0) AS correct_count,
             COALESCE(r.wrong_count, 0) AS wrong_count
         FROM words w
@@ -51,9 +56,9 @@ def load(app):
       for word in words:
         words_data.append({
           "id": word["id"],
-          "Cyrillic": word["Cyrillic"],
-          "English": word["English"],
-          "Latin": word["Latin"],
+          "russian": word["russian"],
+          "english": word["english"],
+          "latin": word["latin"],
           "correct_count": word["correct_count"],
           "wrong_count": word["wrong_count"]
         })
@@ -79,7 +84,7 @@ def load(app):
       
       # Query to fetch the word and its details
       cursor.execute('''
-        SELECT w.id, w.Cyrillic, w.English, w.english,
+        SELECT w.id, w.russian, w.english, w.english,
                COALESCE(r.correct_count, 0) AS correct_count,
                COALESCE(r.wrong_count, 0) AS wrong_count,
                GROUP_CONCAT(DISTINCT g.id || '::' || g.name) as groups
@@ -109,9 +114,9 @@ def load(app):
       return jsonify({
         "word": {
           "id": word["id"],
-          "Cyrillic": word["Cyrillic"],
-          "English": word["English"],
-          "Latin": word["Latin"],
+          "russian": word["russian"],
+          "english": word["english"],
+          "latin": word["latin"],
           "correct_count": word["correct_count"],
           "wrong_count": word["wrong_count"],
           "groups": groups

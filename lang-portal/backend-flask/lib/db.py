@@ -84,8 +84,8 @@ class Db:
       for word in words:
         # Insert the word into the words table
         cursor.execute('''
-          INSERT INTO words (Cyrillic, English, Latin, parts) VALUES (?, ?, ?, ?)
-        ''', (word['Cyrillic'], word['English'], word['Latin'], json.dumps(word['parts'])))
+          INSERT INTO words (russian, english, latin, parts) VALUES (?, ?, ?, ?)
+        ''', (word['russian'], word['english'], word['latin'], json.dumps(word['parts'])))
         
         # Get the last inserted word's ID
         word_id = cursor.lastrowid
