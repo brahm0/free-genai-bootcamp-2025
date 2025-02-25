@@ -62,7 +62,7 @@ def create_app(test_config=None):
     def close_db(exception):
         app.db.close()
 
-    # load routes -----------
+    # Load routes
     routes.words.load(app)
     routes.groups.load(app)
     routes.study_sessions.load(app)
