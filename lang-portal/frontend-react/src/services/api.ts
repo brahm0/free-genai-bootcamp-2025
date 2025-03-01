@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = 'http://localhost:5000/api';
 
 // Group types
 export interface Group {
@@ -157,23 +157,22 @@ export const fetchWordDetails = async (wordId: number): Promise<Word> => {
 };
 
 // Study Session API
-export const createStudySession = async (
-  groupId: number,
-  studyActivityId: number
-): Promise<{ session_id: number }> => {
-  const response = await fetch(`${API_BASE_URL}/study_sessions`, {
+export const createStudySession = async (groupId: number, activityId: number) => {
+  const response = await fetch(`${API_BASE_URL}/study-sessions`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       group_id: groupId,
-      study_activity_id: studyActivityId,
-    }),
+      study_activity_id: activityId
+    })
   });
+
   if (!response.ok) {
     throw new Error('Failed to create study session');
   }
+
   return response.json();
 };
 
@@ -252,4 +251,60 @@ export const fetchStudyStats = async (): Promise<StudyStats> => {
     throw new Error('Failed to fetch study stats');
   }
   return response.json();
+};
+
+export const fetchLaunchData = async (activityId: number) => {
+  const response = await fetch(`${API_BASE_URL}/study-activities/${activityId}/launch`);
+  
+  if (!response.ok) {
+    throw new Error('Failed to fetch launch data');
+  }
+
+  return response.json();
+};
+
+interface StudyActivity {
+  id: number;
+  preview_url: string;
+  title: string;
+  launch_url: string;
+}
+
+interface Stats {
+  total_sessions: number;
+  total_time: number;
+}
+
+export const api = {
+  // Study Activities
+  async getRecentSession() {
+    const response = await fetch(`${API_BASE_URL}/recent-session`);
+    if (!response.ok) throw new Error('Failed to fetch recent session');
+    return response.json();
+  },
+
+  async getStats(): Promise<Stats> {
+    const response = await fetch(`${API_BASE_URL}/stats`);
+    if (!response.ok) throw new Error('Failed to fetch stats');
+    return response.json();
+  },
+
+  async getStudyActivity(id: number) {
+    const response = await fetch(`${API_BASE_URL}/study-activities/${id}/launch`);
+    if (!response.ok) throw new Error('Failed to fetch activity');
+    return response.json();
+  },
+
+  async createStudySession(groupId: number, activityId: number) {
+    const response = await fetch(`${API_BASE_URL}/study-sessions`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        group_id: groupId,
+        study_activity_id: activityId
+      })
+    });
+    if (!response.ok) throw new Error('Failed to create session');
+    return response.json();
+  }
 };

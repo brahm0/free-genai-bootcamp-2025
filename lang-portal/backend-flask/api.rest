@@ -1,0 +1,14 @@
+### Health Check
+GET http://localhost:5000/api/health
+
+### Get Launch Data
+GET http://localhost:5000/api/study-activities/1/launch
+
+### Create Study Session
+POST http://localhost:5000/api/study-sessions
+Content-Type: application/json
+
+{
+  "group_id": 1,
+  "study_activity_id": 1
+}

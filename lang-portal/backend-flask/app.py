@@ -1,5 +1,5 @@
-from flask import Flask, g
-from flask_cors import CORS
+from flask import Flask, jsonify, request
+from flask_cors import CORS, cross_origin
 
 from lib.db import Db
 
@@ -57,21 +57,42 @@ def create_app(test_config=None):
         }
     })
 
-    # Close database connection
-    @app.teardown_appcontext
-    def close_db(exception):
-        app.db.close()
-
-    # Load routes
+    # Load routes first
     routes.words.load(app)
     routes.groups.load(app)
     routes.study_sessions.load(app)
     routes.dashboard.load(app)
     routes.study_activities.load(app)
-    
+
+    # Close database connection
+    @app.teardown_appcontext
+    def close_db(exception):
+        app.db.close()
+
+    @app.route('/api/health', methods=['GET'])
+    @cross_origin()
+    def health_check():
+        return jsonify({"status": "healthy"}), 200
+
+    @app.route('/api/study-activities/<int:id>/launch', methods=['GET'])
+    @cross_origin()
+    def get_launch_data(id):
+        return jsonify({
+            "activity": {
+                "id": id,
+                "title": "Sample Activity",
+                "launch_url": "http://localhost:8080/activity",
+                "preview_url": "/preview.png"
+            },
+            "groups": [
+                {"id": 1, "name": "Group 1"},
+                {"id": 2, "name": "Group 2"}
+            ]
+        })
+
     return app
 
 app = create_app()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)

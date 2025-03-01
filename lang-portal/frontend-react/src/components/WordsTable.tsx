@@ -10,9 +10,42 @@ interface WordsTableProps {
   sortKey: WordSortKey
   sortDirection: 'asc' | 'desc'
   onSort: (key: WordSortKey) => void
+  isLoading?: boolean
+  error?: string
 }
 
-export default function WordsTable({ words, sortKey, sortDirection, onSort }: WordsTableProps) {
+export default function WordsTable({ 
+  words, 
+  sortKey, 
+  sortDirection, 
+  onSort,
+  isLoading = false,
+  error
+}: WordsTableProps) {
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-32 bg-white dark:bg-gray-800 rounded-lg shadow">
+        <span className="text-gray-500 dark:text-gray-400">Loading...</span>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="flex justify-center items-center h-32 bg-white dark:bg-gray-800 rounded-lg shadow">
+        <span className="text-red-500 dark:text-red-400">{error}</span>
+      </div>
+    )
+  }
+
+  if (!words?.length) {
+    return (
+      <div className="flex justify-center items-center h-32 bg-white dark:bg-gray-800 rounded-lg shadow">
+        <span className="text-gray-500 dark:text-gray-400">No words found</span>
+      </div>
+    )
+  }
+
   return (
     <div className="overflow-x-auto bg-white dark:bg-gray-800 rounded-lg shadow">
       <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
