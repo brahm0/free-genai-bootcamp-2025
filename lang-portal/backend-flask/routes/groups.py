@@ -95,13 +95,13 @@ def load(app):
       offset = (page - 1) * words_per_page
 
       # Get sorting parameters
-      sort_by = request.args.get('sort_by', 'Cyrillic')
+      sort_by = request.args.get('sort_by', 'russian')
       order = request.args.get('order', 'asc')
 
       # Validate sort parameters
-      valid_columns = ['Cyrillic', 'English', 'Latin', 'correct_count', 'wrong_count']
+      valid_columns = ['russian', 'latin', 'english', 'correct_count', 'wrong_count']
       if sort_by not in valid_columns:
-        sort_by = 'Cyrillic'
+        sort_by = 'russian'
       if order not in ['asc', 'desc']:
         order = 'asc'
 
@@ -140,9 +140,9 @@ def load(app):
       for word in words:
         words_data.append({
           "id": word["id"],
-          "Cyrillic": word["Cyrillic"],
-          "English": word["English"],
-          "Latin": word["Latin"],
+          "russian": word["russian"],
+          "latin": word["latin"],
+          "english": word["english"],
           "correct_count": word["correct_count"],
           "wrong_count": word["wrong_count"]
         })
