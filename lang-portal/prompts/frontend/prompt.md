@@ -6,9 +6,9 @@ Frontend Developer
 
 ## Project Brief
 
-We are building a japanese langauge learning web-app which serves the following purposes:
+We are building a Russian langauge learning web-app which serves the following purposes:
 - A portal to launch study activities
-- to store, group and explore japanese vocabulary
+- to store, group and explore Russian vocabulary
 - to review study progress
 
 The web-app is intended for desktop only, so we don't have to be concerned with mobile layouts.
@@ -59,7 +59,7 @@ see where they are. Examples of breadcrumbs
 Dashboard
 Study Activities > Adventure MUD
 Study Activities > Typing Tutor
-Words > 始める
+Words > slov
 Word Groups > Core Verbs
 
 ## Pages
@@ -116,10 +116,10 @@ There will be a list of sessions for this study activity
 The route for this page /words
 
 This is table of words with the following cells:
-- Japanese: The japanese word with Kanji
+- Russian: The Russian word with Cyrillic characters
   - This will also contain a small button to play the sound of the word
-  - The japanese word will be a link to the Words Show page
-- Romaji: The romaji version of the word
+  - The russian word will be a link to the Words Show page
+- latin transliteration: The transliterated version of the word
 - English: The english version of the word
 - \# Correct: Number of correct word review items
 - \# Wrong: Number of wrong word review items
